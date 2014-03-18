@@ -42,7 +42,6 @@
 
 package es.eucm.ead.editor.search;
 
-import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.utils.reflect.Field;
 import es.eucm.ead.editor.control.Controller;
@@ -62,7 +61,9 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * 
@@ -240,9 +241,13 @@ public class IndexTest {
 
 		// FIXME: this is ugly but necessary, as jar URLs cannot be fed to
 		// OpenGame
-		File source = new File(
-				"../../engine/desktop/src/test/resources/techdemo")
-				.getCanonicalFile();
+		File source = null;
+		URL url = ClassLoader.getSystemResource("techdemo/game.json");
+		try {
+			source = new File(url.toURI()).getParentFile();
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+		}
 
 		mockController.getModel().addLoadListener(
 				new Model.ModelListener<LoadEvent>() {
