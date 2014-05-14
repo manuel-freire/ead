@@ -207,4 +207,13 @@ public abstract class Operation extends Expression {
 		}
 		return null;
 	}
+
+	/**
+	 * Resets the expression, for use in pools.
+	 */
+	@Override
+	public void reset() {
+		super.reset();
+		children.clear();
+	}
 }

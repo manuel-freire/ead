@@ -36,6 +36,7 @@
  */
 package es.eucm.ead.engine.expressions;
 
+import com.badlogic.gdx.utils.Pool;
 import es.eucm.ead.engine.variables.VarsContext;
 
 /**
@@ -48,7 +49,7 @@ import es.eucm.ead.engine.variables.VarsContext;
  * 
  * @author mfreire
  */
-public abstract class Expression {
+public abstract class Expression implements Pool.Poolable {
 	/**
 	 * Used for debugging. See ExpressionException.
 	 */
@@ -143,4 +144,13 @@ public abstract class Expression {
 	public abstract Object evaluate(VarsContext context, boolean lazy)
 			throws ExpressionEvaluationException;
 
+	/**
+	 * Resets the expression, for use in pools.
+	 */
+	@Override
+	public void reset() {
+		value = null;
+		isConstant = false;
+		tokenPosition = 0;
+	}
 }
