@@ -37,9 +37,8 @@
 
 package es.eucm.ead.schema.renderers;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 import es.eucm.ead.schema.data.shape.Polygon;
 
 /**
@@ -57,7 +56,7 @@ public class Image extends Renderer {
 	 * height will be considered for hits
 	 * 
 	 */
-	private List<Polygon> collider = new ArrayList<Polygon>();
+	private Array<Polygon> collider = new Array<Polygon>();
 
 	public String getUri() {
 		return uri;
@@ -74,7 +73,7 @@ public class Image extends Renderer {
 	 * height will be considered for hits
 	 * 
 	 */
-	public List<Polygon> getCollider() {
+	public Array<Polygon> getCollider() {
 		return collider;
 	}
 
@@ -85,7 +84,7 @@ public class Image extends Renderer {
 	 * height will be considered for hits
 	 * 
 	 */
-	public void setCollider(List<Polygon> collider) {
+	public void setCollider(Array<Polygon> collider) {
 		this.collider = collider;
 	}
 

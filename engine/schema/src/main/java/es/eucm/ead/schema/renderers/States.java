@@ -37,20 +37,19 @@
 
 package es.eucm.ead.schema.renderers;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 
 @Generated("org.jsonschema2pojo")
 public class States extends Renderer {
 
-	private List<State> states = new ArrayList<State>();
+	private Array<State> states = new Array<State>();
 
-	public List<State> getStates() {
+	public Array<State> getStates() {
 		return states;
 	}
 
-	public void setStates(List<State> states) {
+	public void setStates(Array<State> states) {
 		this.states = states;
 	}
 

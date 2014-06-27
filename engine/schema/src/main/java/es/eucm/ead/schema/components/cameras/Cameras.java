@@ -37,9 +37,8 @@
 
 package es.eucm.ead.schema.components.cameras;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 import es.eucm.ead.schema.components.ModelComponent;
 
 /**
@@ -53,13 +52,13 @@ public class Cameras extends ModelComponent {
 	 * The list of all static cameras associated to the scene
 	 * 
 	 */
-	private List<Camera> cameras = new ArrayList<Camera>();
+	private Array<Camera> cameras = new Array<Camera>();
 
 	/**
 	 * The list of all static cameras associated to the scene
 	 * 
 	 */
-	public List<Camera> getCameras() {
+	public Array<Camera> getCameras() {
 		return cameras;
 	}
 
@@ -67,7 +66,7 @@ public class Cameras extends ModelComponent {
 	 * The list of all static cameras associated to the scene
 	 * 
 	 */
-	public void setCameras(List<Camera> cameras) {
+	public void setCameras(Array<Camera> cameras) {
 		this.cameras = cameras;
 	}
 

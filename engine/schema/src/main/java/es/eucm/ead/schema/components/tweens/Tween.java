@@ -156,7 +156,7 @@ public class Tween extends BaseTween {
 		private static Map<String, Tween.EaseEquation> constants = new HashMap<String, Tween.EaseEquation>();
 
 		static {
-			for (Tween.EaseEquation c : Tween.EaseEquation.values()) {
+			for (Tween.EaseEquation c : values()) {
 				constants.put(c.value, c);
 			}
 		}
@@ -189,7 +189,7 @@ public class Tween extends BaseTween {
 		private static Map<String, Tween.EaseType> constants = new HashMap<String, Tween.EaseType>();
 
 		static {
-			for (Tween.EaseType c : Tween.EaseType.values()) {
+			for (Tween.EaseType c : values()) {
 				constants.put(c.value, c);
 			}
 		}

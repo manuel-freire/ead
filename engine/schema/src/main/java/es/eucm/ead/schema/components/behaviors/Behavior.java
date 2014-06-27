@@ -37,10 +37,9 @@
 
 package es.eucm.ead.schema.components.behaviors;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
 import es.eucm.ead.schema.components.ModelComponent;
+import com.badlogic.gdx.utils.Array;
 import es.eucm.ead.schema.effects.Effect;
 
 /**
@@ -60,7 +59,7 @@ public class Behavior extends ModelComponent {
 	 * List of effects to be launched
 	 * 
 	 */
-	private List<Effect> effects = new ArrayList<Effect>();
+	private Array<Effect> effects = new Array<Effect>();
 
 	/**
 	 * Represents something that can happen to an entity
@@ -82,7 +81,7 @@ public class Behavior extends ModelComponent {
 	 * List of effects to be launched
 	 * 
 	 */
-	public List<Effect> getEffects() {
+	public Array<Effect> getEffects() {
 		return effects;
 	}
 
@@ -90,7 +89,7 @@ public class Behavior extends ModelComponent {
 	 * List of effects to be launched
 	 * 
 	 */
-	public void setEffects(List<Effect> effects) {
+	public void setEffects(Array<Effect> effects) {
 		this.effects = effects;
 	}
 

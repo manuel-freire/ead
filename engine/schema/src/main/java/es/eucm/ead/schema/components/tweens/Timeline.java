@@ -37,11 +37,10 @@
 
 package es.eucm.ead.schema.components.tweens;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 
 /**
  * Base class for timelines. A timeline can be used to create complex
@@ -61,7 +60,7 @@ public class Timeline extends BaseTween {
 	 * mode.
 	 * 
 	 */
-	private List<BaseTween> children = new ArrayList<BaseTween>();
+	private Array<BaseTween> children = new Array<BaseTween>();
 
 	/**
 	 * If the timeline is a sequence or it shall begin in parallel mode.
@@ -84,7 +83,7 @@ public class Timeline extends BaseTween {
 	 * mode.
 	 * 
 	 */
-	public List<BaseTween> getChildren() {
+	public Array<BaseTween> getChildren() {
 		return children;
 	}
 
@@ -93,7 +92,7 @@ public class Timeline extends BaseTween {
 	 * mode.
 	 * 
 	 */
-	public void setChildren(List<BaseTween> children) {
+	public void setChildren(Array<BaseTween> children) {
 		this.children = children;
 	}
 
@@ -105,7 +104,7 @@ public class Timeline extends BaseTween {
 		private static Map<String, Timeline.Mode> constants = new HashMap<String, Timeline.Mode>();
 
 		static {
-			for (Timeline.Mode c : Timeline.Mode.values()) {
+			for (Timeline.Mode c : values()) {
 				constants.put(c.value, c);
 			}
 		}

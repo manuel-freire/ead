@@ -37,9 +37,8 @@
 
 package es.eucm.ead.schema.effects.controlstructures;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 import es.eucm.ead.schema.data.Script;
 
 /**
@@ -56,7 +55,7 @@ public class ScriptCall extends ControlStructure {
 	 * given if more input arguments are provided than needed
 	 * 
 	 */
-	private List<String> inputArgumentValues = new ArrayList<String>();
+	private Array<String> inputArgumentValues = new Array<String>();
 	/**
 	 * A set of effects that can be launched with argument initialization.
 	 * 
@@ -70,7 +69,7 @@ public class ScriptCall extends ControlStructure {
 	 * given if more input arguments are provided than needed
 	 * 
 	 */
-	public List<String> getInputArgumentValues() {
+	public Array<String> getInputArgumentValues() {
 		return inputArgumentValues;
 	}
 
@@ -81,7 +80,7 @@ public class ScriptCall extends ControlStructure {
 	 * given if more input arguments are provided than needed
 	 * 
 	 */
-	public void setInputArgumentValues(List<String> inputArgumentValues) {
+	public void setInputArgumentValues(Array<String> inputArgumentValues) {
 		this.inputArgumentValues = inputArgumentValues;
 	}
 

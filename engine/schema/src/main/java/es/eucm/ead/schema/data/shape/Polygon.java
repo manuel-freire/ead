@@ -37,9 +37,8 @@
 
 package es.eucm.ead.schema.data.shape;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 
 /**
  * A simple polygon representation. Points are stored as consecutive x and y
@@ -49,13 +48,13 @@ import javax.annotation.Generated;
 @Generated("org.jsonschema2pojo")
 public class Polygon extends Shape {
 
-	private List<Float> points = new ArrayList<Float>();
+	private Array<Float> points = new Array<Float>();
 
-	public List<Float> getPoints() {
+	public Array<Float> getPoints() {
 		return points;
 	}
 
-	public void setPoints(List<Float> points) {
+	public void setPoints(Array<Float> points) {
 		this.points = points;
 	}
 

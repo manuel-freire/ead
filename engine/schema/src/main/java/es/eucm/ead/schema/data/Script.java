@@ -37,9 +37,8 @@
 
 package es.eucm.ead.schema.data;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 import es.eucm.ead.schema.effects.Effect;
 
 /**
@@ -53,19 +52,19 @@ public class Script {
 	 * Declaration of input variables this script expects
 	 * 
 	 */
-	private List<String> inputArguments = new ArrayList<String>();
+	private Array<String> inputArguments = new Array<String>();
 	/**
 	 * A list of effects that are queued for execution as soon as the script is
 	 * launched.
 	 * 
 	 */
-	private List<Effect> effects = new ArrayList<Effect>();
+	private Array<Effect> effects = new Array<Effect>();
 
 	/**
 	 * Declaration of input variables this script expects
 	 * 
 	 */
-	public List<String> getInputArguments() {
+	public Array<String> getInputArguments() {
 		return inputArguments;
 	}
 
@@ -73,7 +72,7 @@ public class Script {
 	 * Declaration of input variables this script expects
 	 * 
 	 */
-	public void setInputArguments(List<String> inputArguments) {
+	public void setInputArguments(Array<String> inputArguments) {
 		this.inputArguments = inputArguments;
 	}
 
@@ -82,7 +81,7 @@ public class Script {
 	 * launched.
 	 * 
 	 */
-	public List<Effect> getEffects() {
+	public Array<Effect> getEffects() {
 		return effects;
 	}
 
@@ -91,7 +90,7 @@ public class Script {
 	 * launched.
 	 * 
 	 */
-	public void setEffects(List<Effect> effects) {
+	public void setEffects(Array<Effect> effects) {
 		this.effects = effects;
 	}
 

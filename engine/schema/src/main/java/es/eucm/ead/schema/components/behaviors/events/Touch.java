@@ -79,7 +79,7 @@ public class Touch extends Event {
 		private static Map<String, Touch.Type> constants = new HashMap<String, Touch.Type>();
 
 		static {
-			for (Touch.Type c : Touch.Type.values()) {
+			for (Touch.Type c : values()) {
 				constants.put(c.value, c);
 			}
 		}

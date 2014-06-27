@@ -37,9 +37,8 @@
 
 package es.eucm.ead.schema.components;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 import es.eucm.ead.schema.data.conversation.Conversation;
 
 /**
@@ -54,13 +53,13 @@ public class Conversations extends ModelComponent {
 	 * The list of all conversations.
 	 * 
 	 */
-	private List<Conversation> conversations = new ArrayList<Conversation>();
+	private Array<Conversation> conversations = new Array<Conversation>();
 
 	/**
 	 * The list of all conversations.
 	 * 
 	 */
-	public List<Conversation> getConversations() {
+	public Array<Conversation> getConversations() {
 		return conversations;
 	}
 
@@ -68,7 +67,7 @@ public class Conversations extends ModelComponent {
 	 * The list of all conversations.
 	 * 
 	 */
-	public void setConversations(List<Conversation> conversations) {
+	public void setConversations(Array<Conversation> conversations) {
 		this.conversations = conversations;
 	}
 

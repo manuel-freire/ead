@@ -37,11 +37,10 @@
 
 package es.eucm.ead.schema.renderers;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 
 /**
  * A renderer representing a list of frames, intended for animated actors. A
@@ -51,14 +50,14 @@ import javax.annotation.Generated;
 @Generated("org.jsonschema2pojo")
 public class Frames extends Renderer {
 
-	private List<Frame> frames = new ArrayList<Frame>();
+	private Array<Frame> frames = new Array<Frame>();
 	private Frames.Sequence sequence;
 
-	public List<Frame> getFrames() {
+	public Array<Frame> getFrames() {
 		return frames;
 	}
 
-	public void setFrames(List<Frame> frames) {
+	public void setFrames(Array<Frame> frames) {
 		this.frames = frames;
 	}
 
@@ -78,7 +77,7 @@ public class Frames extends Renderer {
 		private static Map<String, Frames.Sequence> constants = new HashMap<String, Frames.Sequence>();
 
 		static {
-			for (Frames.Sequence c : Frames.Sequence.values()) {
+			for (Frames.Sequence c : values()) {
 				constants.put(c.value, c);
 			}
 		}

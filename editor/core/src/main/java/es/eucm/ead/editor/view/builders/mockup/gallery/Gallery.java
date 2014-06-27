@@ -36,16 +36,11 @@
  */
 package es.eucm.ead.editor.view.builders.mockup.gallery;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.Array;
-
 import es.eucm.ead.editor.control.Controller;
 import es.eucm.ead.editor.control.actions.editor.ChangeView;
 import es.eucm.ead.editor.control.actions.model.DeleteScene;
@@ -71,6 +66,9 @@ import es.eucm.ead.engine.I18N;
 import es.eucm.ead.schema.editor.components.Parent;
 import es.eucm.ead.schema.entities.ModelEntity;
 import es.eucm.ead.schemax.entities.ModelEntityCategory;
+
+import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * This gallery displays both {@link es.eucm.ead.schema.entities.ModelEntity}s
@@ -159,8 +157,8 @@ public class Gallery extends BaseGalleryWithNavigation<DescriptionCard> {
 
 		for (final Entry<String, ModelEntity> entry : map.entrySet()) {
 			ModelEntity editorScene = entry.getValue();
-			List<ModelEntity> sceneChildren = editorScene.getChildren();
-			int totalChildren = sceneChildren.size();
+			Array<ModelEntity> sceneChildren = editorScene.getChildren();
+			int totalChildren = sceneChildren.size;
 			for (int i = 0; i < totalChildren; ++i) {
 				ModelEntity currentChildren = (ModelEntity) sceneChildren
 						.get(i);

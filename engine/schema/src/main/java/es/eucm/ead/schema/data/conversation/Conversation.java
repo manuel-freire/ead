@@ -37,9 +37,9 @@
 
 package es.eucm.ead.schema.data.conversation;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
+import es.eucm.ead.schemax.Indexed;
 
 @Generated("org.jsonschema2pojo")
 public class Conversation {
@@ -48,17 +48,18 @@ public class Conversation {
 	 * Descriptive name of conversation, used when launching it.
 	 * 
 	 */
+	@Indexed
 	private String id;
 	/**
 	 * Nodes of conversation, forming a network.
 	 * 
 	 */
-	private List<Node> nodes = new ArrayList<Node>();
+	private Array<Node> nodes = new Array<Node>();
 	/**
 	 * People that speak in this conversation.
 	 * 
 	 */
-	private List<Speaker> speakers = new ArrayList<Speaker>();
+	private Array<Speaker> speakers = new Array<Speaker>();
 
 	/**
 	 * Descriptive name of conversation, used when launching it.
@@ -80,7 +81,7 @@ public class Conversation {
 	 * Nodes of conversation, forming a network.
 	 * 
 	 */
-	public List<Node> getNodes() {
+	public Array<Node> getNodes() {
 		return nodes;
 	}
 
@@ -88,7 +89,7 @@ public class Conversation {
 	 * Nodes of conversation, forming a network.
 	 * 
 	 */
-	public void setNodes(List<Node> nodes) {
+	public void setNodes(Array<Node> nodes) {
 		this.nodes = nodes;
 	}
 
@@ -96,7 +97,7 @@ public class Conversation {
 	 * People that speak in this conversation.
 	 * 
 	 */
-	public List<Speaker> getSpeakers() {
+	public Array<Speaker> getSpeakers() {
 		return speakers;
 	}
 
@@ -104,7 +105,7 @@ public class Conversation {
 	 * People that speak in this conversation.
 	 * 
 	 */
-	public void setSpeakers(List<Speaker> speakers) {
+	public void setSpeakers(Array<Speaker> speakers) {
 		this.speakers = speakers;
 	}
 

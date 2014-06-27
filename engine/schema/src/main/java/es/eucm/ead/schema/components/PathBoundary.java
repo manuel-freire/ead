@@ -37,9 +37,8 @@
 
 package es.eucm.ead.schema.components;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 import es.eucm.ead.schema.data.shape.Polygon;
 
 @Generated("org.jsonschema2pojo")
@@ -50,7 +49,7 @@ public class PathBoundary extends ModelComponent {
 	 * outside boundary, the rest are disjoint holes.
 	 * 
 	 */
-	private List<Polygon> boundaryPolygons = new ArrayList<Polygon>();
+	private Array<Polygon> boundaryPolygons = new Array<Polygon>();
 	/**
 	 * A simple polygon representation. Points are stored as consecutive x and y
 	 * coordinates, i.e., [x0, y0, x1, y1, x2, y2, ...].
@@ -68,7 +67,7 @@ public class PathBoundary extends ModelComponent {
 	 * outside boundary, the rest are disjoint holes.
 	 * 
 	 */
-	public List<Polygon> getBoundaryPolygons() {
+	public Array<Polygon> getBoundaryPolygons() {
 		return boundaryPolygons;
 	}
 
@@ -77,7 +76,7 @@ public class PathBoundary extends ModelComponent {
 	 * outside boundary, the rest are disjoint holes.
 	 * 
 	 */
-	public void setBoundaryPolygons(List<Polygon> boundaryPolygons) {
+	public void setBoundaryPolygons(Array<Polygon> boundaryPolygons) {
 		this.boundaryPolygons = boundaryPolygons;
 	}
 

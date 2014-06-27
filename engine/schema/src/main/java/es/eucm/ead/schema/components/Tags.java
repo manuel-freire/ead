@@ -37,20 +37,19 @@
 
 package es.eucm.ead.schema.components;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 
 @Generated("org.jsonschema2pojo")
 public class Tags extends ModelComponent {
 
-	private List<String> tags = new ArrayList<String>();
+	private Array<String> tags = new Array<String>();
 
-	public List<String> getTags() {
+	public Array<String> getTags() {
 		return tags;
 	}
 
-	public void setTags(List<String> tags) {
+	public void setTags(Array<String> tags) {
 		this.tags = tags;
 	}
 

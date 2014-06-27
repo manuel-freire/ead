@@ -36,10 +36,6 @@
  */
 package es.eucm.ead.editor.view.builders.mockup.gallery;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -47,7 +43,6 @@ import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.Array;
-
 import es.eucm.ead.editor.control.Controller;
 import es.eucm.ead.editor.control.actions.editor.ChangeView;
 import es.eucm.ead.editor.control.actions.model.AddSceneElement;
@@ -68,6 +63,9 @@ import es.eucm.ead.engine.I18N;
 import es.eucm.ead.schema.editor.components.Parent;
 import es.eucm.ead.schema.entities.ModelEntity;
 import es.eucm.ead.schemax.entities.ModelEntityCategory;
+
+import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * A gallery that only displays {@link es.eucm.ead.schema.entities.ModelEntity}
@@ -138,9 +136,9 @@ public class ElementGallery extends BaseGalleryWithNavigation<ElementButton> {
 				ModelEntityCategory.SCENE);
 		for (final Entry<String, ModelEntity> entry : map.entrySet()) {
 			final ModelEntity currEditorScene = entry.getValue();
-			final List<ModelEntity> sceneChildren = currEditorScene
+			final Array<ModelEntity> sceneChildren = currEditorScene
 					.getChildren();
-			final int totalChildren = sceneChildren.size();
+			final int totalChildren = sceneChildren.size;
 			for (int i = 0; i < totalChildren; ++i) {
 				final ModelEntity currentChildren = sceneChildren.get(i);
 				elements.add(new ElementButton(viewport, i18n, currentChildren,

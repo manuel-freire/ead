@@ -119,7 +119,7 @@ public class ChangeVar extends Effect {
 		private static Map<String, ChangeVar.Context> constants = new HashMap<String, ChangeVar.Context>();
 
 		static {
-			for (ChangeVar.Context c : ChangeVar.Context.values()) {
+			for (ChangeVar.Context c : values()) {
 				constants.put(c.value, c);
 			}
 		}

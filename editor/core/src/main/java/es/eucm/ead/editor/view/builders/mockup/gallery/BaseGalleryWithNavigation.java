@@ -73,7 +73,6 @@ import es.eucm.ead.schemax.entities.ModelEntityCategory;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -428,15 +427,15 @@ public abstract class BaseGalleryWithNavigation<T extends DescriptionCard>
 		Map<String, ModelEntity> map = controller.getModel().getEntities(
 				ModelEntityCategory.SCENE);
 		for (Entry<String, ModelEntity> entry : map.entrySet()) {
-			List<ModelEntity> sceneChildren = entry.getValue().getChildren();
-			int totalChildren = sceneChildren.size();
+			Array<ModelEntity> sceneChildren = entry.getValue().getChildren();
+			int totalChildren = sceneChildren.size;
 			for (int i = 0; i < totalChildren; ++i) {
 				ModelEntity currentChildren = sceneChildren.get(i);
 				for (ModelComponent component : currentChildren.getComponents()) {
 					if (component instanceof Tags) {
-						List<String> childrenTags = ((Tags) component)
+						Array<String> childrenTags = ((Tags) component)
 								.getTags();
-						int totalChildrenTags = childrenTags.size();
+						int totalChildrenTags = childrenTags.size;
 						for (int j = 0; j < totalChildrenTags; ++j) {
 							String currentTag = childrenTags.get(j);
 							if (!tags.contains(currentTag, false)) {

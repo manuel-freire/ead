@@ -37,9 +37,8 @@
 
 package es.eucm.ead.schema.effects.controlstructures;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 import es.eucm.ead.schema.effects.Effect;
 
 /**
@@ -55,20 +54,20 @@ public class IfThenElseIf extends If {
 	 * if(condition2){effects2} else if (condition3){effects3}...
 	 * 
 	 */
-	private List<If> elseIfList = new ArrayList<If>();
+	private Array<If> elseIfList = new Array<If>();
 	/**
 	 * A list of effects that are queued for execution if no conditions before
 	 * are evaluated to false. If not present, nothing happens.
 	 * 
 	 */
-	private List<Effect> _else = new ArrayList<Effect>();
+	private Array<Effect> _else = new Array<Effect>();
 
 	/**
 	 * A list of condition+effects structures that can be used to implement else
 	 * if(condition2){effects2} else if (condition3){effects3}...
 	 * 
 	 */
-	public List<If> getElseIfList() {
+	public Array<If> getElseIfList() {
 		return elseIfList;
 	}
 
@@ -77,7 +76,7 @@ public class IfThenElseIf extends If {
 	 * if(condition2){effects2} else if (condition3){effects3}...
 	 * 
 	 */
-	public void setElseIfList(List<If> elseIfList) {
+	public void setElseIfList(Array<If> elseIfList) {
 		this.elseIfList = elseIfList;
 	}
 
@@ -86,7 +85,7 @@ public class IfThenElseIf extends If {
 	 * are evaluated to false. If not present, nothing happens.
 	 * 
 	 */
-	public List<Effect> getElse() {
+	public Array<Effect> getElse() {
 		return _else;
 	}
 
@@ -95,7 +94,7 @@ public class IfThenElseIf extends If {
 	 * are evaluated to false. If not present, nothing happens.
 	 * 
 	 */
-	public void setElse(List<Effect> _else) {
+	public void setElse(Array<Effect> _else) {
 		this._else = _else;
 	}
 

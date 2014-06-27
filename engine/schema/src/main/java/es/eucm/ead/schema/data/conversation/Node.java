@@ -37,9 +37,8 @@
 
 package es.eucm.ead.schema.data.conversation;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 import es.eucm.ead.schema.effects.Effect;
 
 /**
@@ -75,7 +74,7 @@ public class Node {
 	 * possible associated images.
 	 * 
 	 */
-	private List<String> lines = new ArrayList<String>();
+	private Array<String> lines = new Array<String>();
 	/**
 	 * Effects define events that affects/changes the game state.
 	 * 
@@ -85,7 +84,7 @@ public class Node {
 	 * IDs of lines that can be used to reply to this line
 	 * 
 	 */
-	private List<Integer> outgoing = new ArrayList<Integer>();
+	private Array<Integer> outgoing = new Array<Integer>();
 
 	/**
 	 * ID of the line. Used to create a conversation graph. Unique within the
@@ -149,7 +148,7 @@ public class Node {
 	 * possible associated images.
 	 * 
 	 */
-	public List<String> getLines() {
+	public Array<String> getLines() {
 		return lines;
 	}
 
@@ -159,7 +158,7 @@ public class Node {
 	 * possible associated images.
 	 * 
 	 */
-	public void setLines(List<String> lines) {
+	public void setLines(Array<String> lines) {
 		this.lines = lines;
 	}
 
@@ -183,7 +182,7 @@ public class Node {
 	 * IDs of lines that can be used to reply to this line
 	 * 
 	 */
-	public List<Integer> getOutgoing() {
+	public Array<Integer> getOutgoing() {
 		return outgoing;
 	}
 
@@ -191,7 +190,7 @@ public class Node {
 	 * IDs of lines that can be used to reply to this line
 	 * 
 	 */
-	public void setOutgoing(List<Integer> outgoing) {
+	public void setOutgoing(Array<Integer> outgoing) {
 		this.outgoing = outgoing;
 	}
 

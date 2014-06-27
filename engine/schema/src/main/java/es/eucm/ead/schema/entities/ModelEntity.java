@@ -37,9 +37,8 @@
 
 package es.eucm.ead.schema.entities;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 import es.eucm.ead.schema.components.ModelComponent;
 
 /**
@@ -61,12 +60,12 @@ public class ModelEntity {
 	 * A list with the components forming this entity
 	 * 
 	 */
-	private List<ModelComponent> components = new ArrayList<ModelComponent>();
+	private Array<ModelComponent> components = new Array<ModelComponent>();
 	/**
 	 * Entity children
 	 * 
 	 */
-	private List<ModelEntity> children = new ArrayList<ModelEntity>();
+	private Array<ModelEntity> children = new Array<ModelEntity>();
 
 	public float getX() {
 		return x;
@@ -128,7 +127,7 @@ public class ModelEntity {
 	 * A list with the components forming this entity
 	 * 
 	 */
-	public List<ModelComponent> getComponents() {
+	public Array<ModelComponent> getComponents() {
 		return components;
 	}
 
@@ -136,7 +135,7 @@ public class ModelEntity {
 	 * A list with the components forming this entity
 	 * 
 	 */
-	public void setComponents(List<ModelComponent> components) {
+	public void setComponents(Array<ModelComponent> components) {
 		this.components = components;
 	}
 
@@ -144,7 +143,7 @@ public class ModelEntity {
 	 * Entity children
 	 * 
 	 */
-	public List<ModelEntity> getChildren() {
+	public Array<ModelEntity> getChildren() {
 		return children;
 	}
 
@@ -152,7 +151,7 @@ public class ModelEntity {
 	 * Entity children
 	 * 
 	 */
-	public void setChildren(List<ModelEntity> children) {
+	public void setChildren(Array<ModelEntity> children) {
 		this.children = children;
 	}
 
