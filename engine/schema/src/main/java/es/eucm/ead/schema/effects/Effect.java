@@ -37,9 +37,8 @@
 
 package es.eucm.ead.schema.effects;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.Generated;
+import com.badlogic.gdx.utils.Array;
 import es.eucm.ead.schema.data.Parameter;
 
 /**
@@ -61,7 +60,7 @@ public class Effect {
 	 * value given by an expression (parameter value)
 	 * 
 	 */
-	private List<Parameter> parameters = new ArrayList<Parameter>();
+	private Array<Parameter> parameters = new Array<Parameter>();
 
 	/**
 	 * Expression that defines which entities this effect has to be applied to.
@@ -88,7 +87,7 @@ public class Effect {
 	 * value given by an expression (parameter value)
 	 * 
 	 */
-	public List<Parameter> getParameters() {
+	public Array<Parameter> getParameters() {
 		return parameters;
 	}
 
@@ -97,7 +96,7 @@ public class Effect {
 	 * value given by an expression (parameter value)
 	 * 
 	 */
-	public void setParameters(List<Parameter> parameters) {
+	public void setParameters(Array<Parameter> parameters) {
 		this.parameters = parameters;
 	}
 

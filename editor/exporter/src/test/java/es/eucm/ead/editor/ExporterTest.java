@@ -66,7 +66,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
@@ -74,7 +73,8 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarInputStream;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 /**
  * Tests {@link Exporter}.
@@ -331,7 +331,7 @@ public class ExporterTest {
 											.getComponents().get(0);
 									assertEquals(Init.class, behavior
 											.getEvent().getClass());
-									List<Effect> effects = behavior
+									Array<Effect> effects = behavior
 											.getEffects();
 									AddEntity addScene = (AddEntity) effects
 											.get(0);

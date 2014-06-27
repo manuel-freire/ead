@@ -373,12 +373,11 @@ public class ControlStructuresTest extends EffectTest implements
 		Timer timer = new Timer();
 		timer.setTime(0);
 		Behavior behavior = new Behavior();
-
 		behavior.setEvent(timer);
-		Array<Effect> a = new Array<Effect>();		a.add(scriptCall);
+		Array<Effect> a = new Array<Effect>();
+		a.add(scriptCall);
 		behavior.setEffects(a);
-		//aviors.getBehaviors().add(behavior);
-		modelEntity.getComponents().add(behaviors);
+		modelEntity.getComponents().add(behavior);
 		// Add also mock component so there are more things that can be accessed
 		MockModelComponent mockModelComponent = new MockModelComponent();
 		mockModelComponent.setFloatAttribute(5);

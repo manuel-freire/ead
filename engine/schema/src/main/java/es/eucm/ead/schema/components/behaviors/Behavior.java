@@ -38,8 +38,8 @@
 package es.eucm.ead.schema.components.behaviors;
 
 import javax.annotation.Generated;
-import es.eucm.ead.schema.components.ModelComponent;
 import com.badlogic.gdx.utils.Array;
+import es.eucm.ead.schema.components.ModelComponent;
 import es.eucm.ead.schema.effects.Effect;
 
 /**
