@@ -68,9 +68,9 @@ GOTO END
 :okHome
 
 
-REM Check if we have an embedded jdk
-IF NOT EXIST "%EADVENTURE_HOME%\jdk" GOTO :checkJava
-SET "JDK_HOME=%EADVENTURE_HOME%\jdk"
+REM Check if we have an embedded jre
+IF NOT EXIST "%EADVENTURE_HOME%\jre" GOTO :checkJava
+SET "JDK_HOME=%EADVENTURE_HOME%\jre"
 
 :checkJava
 IF NOT "%JDK_HOME%" == "" GOTO gotjdkHome

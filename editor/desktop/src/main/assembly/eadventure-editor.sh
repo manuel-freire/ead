@@ -44,9 +44,9 @@ if [ -z "$EADVENTURE_HOME" ]; then
 	EADVENTURE_HOME=$(cd "$PROGRAMDIR" >/dev/null; pwd)
 fi
 
-# Check if we have an embedded jdk
-if [ -d "$EADVENTURE_HOME/jdk" ]; then
-	JDK_HOME="$EADVENTURE_HOME/jdk"
+# Check if we have an embedded jre
+if [ -d "$EADVENTURE_HOME/jre" ]; then
+	JDK_HOME="$EADVENTURE_HOME/jre"
 fi
 
 if [ -z "$JDK_HOME" ]; then

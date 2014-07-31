@@ -41,24 +41,24 @@
             </includes>
         </fileSet>
         <fileSet>
-            <directory>target/jdk-linux-amd64/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-amd64-image/</directory>
-            <outputDirectory>/jdk/</outputDirectory>
+            <directory>target/jdk-linux-amd64/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-amd64-image/jre</directory>
+            <outputDirectory>/jre/</outputDirectory>
             <excludes>
                 <exclude>bin/java</exclude>
             </excludes>
         </fileSet>
         <fileSet>
-            <directory>target/jdk-linux-amd64/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-amd64-image/bin/</directory>
-            <outputDirectory>/jdk/bin/</outputDirectory>
+            <directory>target/jdk-linux-amd64/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-amd64-image/jre</directory>
+            <outputDirectory>/jre/</outputDirectory>
             <includes>
-                <include>java</include>
+                <include>bin/java</include>
             </includes>
             <fileMode>0755</fileMode>
         </fileSet>
     </fileSets>
     <files>
         <file>
-            <source>target/eadventure-${project.artifactId}-jar-with-dependencies.jar</source>
+            <source>target/eadventure-${projecgitt.artifactId}-jar-with-dependencies.jar</source>
             <outputDirectory>/libs/</outputDirectory>
             <destName>${eadventure.main.jar}</destName>
         </file>
